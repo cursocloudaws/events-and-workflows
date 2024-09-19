@@ -2,7 +2,7 @@
 
 | API (sync)  |            Input Events            |  Service   |      Action      |                 Output Events                  |             Notes             |
 | :---------: | :--------------------------------: | :--------: | :--------------: | :--------------------------------------------: | :---------------------------: |
-| CreateOrder |            CreateOrder             |   Order    |   CreateOrder    |                  OrderCreated                  |          Public API.          |
+| CreateOrder |            OrderCreate             |   Order    |   CreateOrder    |                  OrderCreated                  |          Public API.          |
 |             |            OrderCreated            | Inventory  |   ReserveItem    |         ItemReserved ItemNotAvailable          |                               |
 |             |            ItemReserved            | Inventory  |   DescribeItem   |                 ItemDescribed                  |                               |
 |             |            ItemDescribed           |  Customer  | DescribeCustomer |    CustomerDescribed ErrorCustomerDescribed    |  Get name, address, and email |

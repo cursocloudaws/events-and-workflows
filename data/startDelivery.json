@@ -1,8 +1,8 @@
 [
     {
-      "EventBusName": "AppEventBus-<stack-name>",
+      "EventBusName": "AppEventBus-alucloud00-sam-app",
       "Source": "Logistics",
-      "Detail": "{ \"customerId\": \"customer-1\", \"orderId\": \"2021-11-08T13:36:50.685Z\" }",
+      "Detail": "{ \"customerId\": \"customer-1\", \"orderId\": \"2022-05-24T16:15:32.549Z\" }",
       "DetailType": "DeliveryCanceled"
     }
   ]
