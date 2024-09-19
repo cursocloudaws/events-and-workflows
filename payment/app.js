@@ -2,9 +2,13 @@ const { DynamoDB } = require("@aws-sdk/client-dynamodb");
 const { DynamoDBDocument, ExecuteStatementCommand } = require("@aws-sdk/lib-dynamodb");
 const { EventBridgeClient, PutEventsCommand } = require("@aws-sdk/client-eventbridge");
 
+/*
+ Germán - 19/09/2024 - No longer available in AWS Lambda Node JS 20.X runtime environment. Use crypto instead.
 const { 
     v4: uuidv4,
 } = require('uuid');
+ */
+const { randomUUID } = require('crypto');
 
 const ddbClient = new DynamoDB();
 const ddbDocClient = DynamoDBDocument.from(ddbClient);
@@ -91,7 +95,7 @@ async function describePayment(paymentId) {
 
 async function makePayment(amount) {
 
-    const paymentId = uuidv4();
+    const paymentId = randomUUID();
     const failed = shouldPaymentFail();
     const status = failed ? 'FAILED' : "PAID";
 
